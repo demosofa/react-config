@@ -1,3 +1,3 @@
-export function Page403() {
+export function Forbidden() {
 	return <div>This is 403 page</div>;
 }
