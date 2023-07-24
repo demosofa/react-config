@@ -1,11 +1,12 @@
 import { ROLE } from 'constants/Role';
-import { FormEventHandler, useEffect, useState } from 'react';
+import { FormEventHandler, useLayoutEffect, useState } from 'react';
 import { UserLogin } from 'types/User';
 import { getStorage, setStorage } from 'utils/storage';
 import { useNavigate } from 'react-router-dom';
 import clone from 'utils/clone';
 
 export function Login() {
+	const role = getStorage('role');
 	const navigate = useNavigate();
 	const [user, setUser] = useState<Partial<UserLogin>>({});
 
@@ -25,13 +26,12 @@ export function Login() {
 				setStorage('role', ROLE[roleLogin]);
 			}
 		}
-		navigate(-2);
+		navigate('/');
 	};
 
-	useEffect(() => {
-		const check = getStorage('role');
-		if (check != null) navigate(-2);
-	}, []);
+	useLayoutEffect(() => {
+		if (role != null) navigate('/');
+	}, [role]);
 
 	return (
 		<form onSubmit={handleLogin}>
