@@ -1,3 +1,7 @@
+import { LOCALE } from 'constants/Locale';
+import { useTranslation } from 'react-i18next';
+
 export function Homepage() {
-	return <div>This is Homepage</div>;
+	const { t } = useTranslation();
+	return <div>This is {t(LOCALE.Homepage)}</div>;
 }
