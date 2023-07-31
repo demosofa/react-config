@@ -21,7 +21,16 @@
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
 		"baseUrl": "./src",
-		"paths": {}
+		"paths": {
+			"@components": ["./component/index"],
+			"@constants": ["./constants/index"],
+			"@reducers": ["./reducers/index"],
+			"@locales": ["./locales/index"],
+			"@types": ["./types/index"],
+			"@hooks": ["./hooks/index"],
+			"@utils": ["./utils/index"],
+			"@pages": ["./pages/index"]
+		}
 	},
 	"include": ["src"],
 	"references": [{ "path": "./tsconfig.node.json" }]

@@ -1,11 +1,10 @@
-import { ROLE } from 'constants/Role';
-import { FormEventHandler, useLayoutEffect, useState } from 'react';
-import { UserLogin } from 'types/User';
-import { getStorage, setStorage } from 'utils/storage';
+import { FormEventHandler, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import clone from 'utils/clone';
-import { LOCALE } from 'constants/Locale';
+
+import { UserLogin } from 'types';
+import { LOCALE, ROLE } from '@constants';
+import { getStorage, setStorage, clone } from 'utils';
 
 export function Login() {
 	const role = getStorage('role');
@@ -34,7 +33,7 @@ export function Login() {
 		navigate('/');
 	};
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		if (role != null) navigate('/');
 	}, [role]);
 

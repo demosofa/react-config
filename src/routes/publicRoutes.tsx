@@ -1,7 +1,5 @@
-import { Homepage } from 'pages/Homepage';
-import { Login } from 'pages/Login';
-import { Forbidden } from 'pages/Forbidden';
 import { RouteObject } from 'react-router-dom';
+import { Homepage, Login, Forbidden } from '@pages';
 
 const publicRoutes: RouteObject[] = [
 	{ path: '/', element: <Homepage /> },

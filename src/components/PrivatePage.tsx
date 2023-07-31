@@ -1,7 +1,7 @@
-import { ROLE } from 'constants/Role';
 import { PropsWithChildren } from 'react';
 import { Navigate } from 'react-router-dom';
-import { getStorage } from 'utils/storage';
+import { ROLE } from '@constants';
+import { getStorage } from '@utils';
 
 export function PrivatePage({
 	children,

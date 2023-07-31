@@ -1,5 +1,5 @@
-import { LOCALE } from 'constants/Locale';
 import { useTranslation } from 'react-i18next';
+import { LOCALE } from '@constants';
 
 export function Homepage() {
 	const { t } = useTranslation();

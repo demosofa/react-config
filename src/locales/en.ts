@@ -1,8 +1,6 @@
 import { Locale } from 'types/Locale';
 
-const en: Locale = {
+export const en: Locale = {
 	login: 'Login',
 	homepage: 'Homepage',
 };
-
-export default en;

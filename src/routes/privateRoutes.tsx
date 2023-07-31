@@ -1,8 +1,7 @@
-import { Route } from 'types/Route';
-import routeBasedRole from 'utils/routeBasedRole';
-
-import { Dashboard } from 'pages/Dashboard';
-import { ROLE } from 'constants/Role';
+import { Dashboard } from '@pages';
+import { ROLE } from '@constants';
+import { Route } from '@types';
+import routeBasedRole from './routeBasedRole';
 import PrivateLayout from 'layouts/PrivateLayout';
 
 const privateRoutes: Route[] = [
